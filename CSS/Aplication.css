@@ -1,7 +1,9 @@
 body {
 	height: 600px;
 	width: 800px;
-	background-color: lightgrey;
+	color: lightgrey;
+	margin: auto;
+	
 
 }
 
