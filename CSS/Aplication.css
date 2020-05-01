@@ -1,7 +1,8 @@
-head {
+body {
 	height: 600px;
 	width: 800px;
 	color: black;
+	background-color: lightgrey;
 	margin: auto;
 
 
@@ -9,9 +10,9 @@ head {
 
 .T1 {
 	text-align: center;
-	color: lightgreen;
+	color: green;
 	font-size: 22px;
 	font-family: 'Arial';
 	font-style: italic;
-	padding-top: 500px;
+	padding-top: 200px;
 }
