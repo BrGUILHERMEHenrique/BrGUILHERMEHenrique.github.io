@@ -1,6 +1,6 @@
 body {
-	height: 600px;
-	width: 800px;
+	height: 1024px;
+	width: 1280px;
 	color: black;
 	background-color: lightgrey;
 	margin: auto;
@@ -15,4 +15,31 @@ body {
 	font-family: 'Arial';
 	font-style: italic;
 	padding-top: 200px;
+}
+
+.P1 {
+	text-shadow: black;
+	font-size: 20px;
+	font-style: inherit;
+	font-family: 'verdana';
+	color: blue;
+	padding-left: -600px;
+	padding-top: 100px;
+
+}
+
+.TE {
+	border-style: inset;
+	color: black;
+	background-color: white;
+	width: 100px;
+	text-align: center;
+	border-radius: 30px;
+}
+
+.btn {
+	color: black;
+	border-color: white;
+	border-radius: 5px;
+	background-color: lightgreen;
 }
