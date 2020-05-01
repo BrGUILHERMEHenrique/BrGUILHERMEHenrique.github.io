@@ -1,6 +1,14 @@
-body {
+head {
 	height: 600px;
 	width: 800px;
 	background-color: lightgrey;
-	
+
+}
+
+.T1 {
+	text-align: center;
+	color: lightgreen;
+	font-size: 22px;
+	font-family: 'Arial';
+	font-style: italic;
 }
