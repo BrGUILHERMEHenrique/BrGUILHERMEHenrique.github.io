@@ -1,6 +1,6 @@
 body {
-	height: 1024px;
-	width: 1280px;
+	height: 1280px;
+	width: 1024px;
 	color: black;
 	background-image: linear-gradient(180deg, black, #292A47);
 
@@ -57,11 +57,9 @@ a span:nth-child(1){
 }
 
 .logo:hover {
-
 color:red;
 background: lime;
 box-shadow: 0 0 10px lime, 0 0 40px lime, 0 0 80px lime;
-
 }
 
 .btn {
@@ -82,3 +80,31 @@ box-shadow: 0 0 10px lime, 0 0 40px lime, 0 0 80px lime;
 	box-shadow: 0 0 10px #EFDB0D, 0 0 40px #EFDB0D, 0 0 80px #EFDB0D;
 }
 
+.Redes {
+	position: absolute;
+	display: inline-block;
+	color:lime;
+
+}
+
+.Redes a{
+	text-decoration: none;
+	color: #0070FF;
+}
+
+.Redes-content {
+	display: none;
+	color: red;
+	background-color: grey;
+	position: absolute;
+	box-shadow: 0 0 10px #F56600, 0 0 40px #F56600, 0 0 80px #F56600;
+	z-index: 1;
+
+}
+
+.Redes:hover .Redes-content {
+	display: block;
+	color:red;
+	background-color: #E60D2E;
+
+}
