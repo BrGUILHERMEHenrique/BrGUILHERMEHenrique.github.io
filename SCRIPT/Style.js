@@ -37,6 +37,13 @@ port.style.background = 'transparent';
 port.style.border = 'none';
 port.style.marginLeft = '7%';
 
+var btns = document.querySelector('body div#btns');
+
+btns.style.width = '20px';
+btns.style.height = '15px';
+
+console.log(btns);
+
 
 
 var MenuButton = document.querySelector('body div#btn1');
@@ -78,7 +85,7 @@ function menuaberto() {
 	
 }
 
-MenuButton2.onmouseover = function menu(){
+btns.onmouseover = function menu(){
 	menuaberto();
 }
 
@@ -94,7 +101,7 @@ function menufechado() {
 }
 
 
-MenuButton2.onmouseout = function menu2 (){
+btns.onmouseout = function menu2 (){
 	menufechado();
 }
 
