@@ -1,146 +1,83 @@
+/* Declara o corpo do site*/
+var body = document.querySelector('body');
+/* Declara a tag para o nome*/
 var nome = document.querySelector('body p#nome');
+/* Declara toda parte do menu*/
+var menu = document.querySelector('body div#menu');
+var proj = document.querySelector('body div#menu div#Btnsmenu button#pág');
+var port = document.querySelector('body div#Btnsmenu button#port');
+/*Declara a div e as linhas que componhem o botão de menu*/
+var btns = document.querySelector('body div#btns');
+var MenuButton = document.querySelector('body div#btn1');
+var MenuButton2 = document.querySelector('body div#btn2');
+var MenuButton3 = document.querySelector('body div#btn3');
+/*Declara o texto*/
+var intro = document.querySelector('body div#In');
+var text = document.querySelector ('body div#In span');
+/*Declara a variável de cada imagem*/
+var Insta = document.querySelector ('body img#Insta');
+var Face = document.querySelector ('body img#Facebook');
+var Twit = document.querySelector ('body img#Twitter');
+var You = document.querySelector ('body img#You');
 
+/*Adiciona pequena estilização ao nome*/
 nome.style.fontSize = '33px';
 nome.style.textAlign = 'center';
 
+      /*Menu Style, configura todo style do menu*/
 
-var menu = document.querySelector('body div#menu');
-
-menu.style.width = 'auto';
+menu.style.width = '1000px';
 menu.style.height = '100px';
-menu.style.backgroundColor = 'rgba(0, 0, 0, 20%)';
+menu.style.backgroundColor = 'rgba(10, 10, 10, 40%)';
 menu.style.marginTop = '-12px';
 menu.style.display = 'none';
 menu.style.border = 'none';
 menu.style.borderRadius = '5px';
-
-var proj = document.querySelector('body div#menu div#Btnsmenu button#pág')
+		/*Botão página Git Hub*/
 proj.style.textDecoration = 'none';
-proj.style.color = 'black';
-proj.style.transform = 'uppercase';
-proj.style.fontFamily = "Verdana";
 proj.style.fontSize = '20px';
 proj.style.backgroundColor = 'transparent';
-proj.style.border = 'none';
+proj.style.color = 'white';
+proj.style.borderLeft = '1px solid grey';
+proj.style.borderRight = '1px solid grey';
+proj.style.borderTop = 'transparent';
+proj.style.borderBottom = 'transparent';
 proj.style.marginLeft = '0';
 
-
-var port = document.querySelector('body div#Btnsmenu button#port');
+			/*Botão Portifólio, configura todo style nom botão PORTIFÓLIO.*/
 
 port.style.textDecoration = 'none';
-port.style.color = 'black';
 port.style.fontSize = '20px';
 port.style.background = 'transparent';
-port.style.border = 'none';
+port.style.color = 'white';
+port.style.borderLeft = '1px solid grey';
+port.style.borderRight = '1px solid grey';
+port.style.borderTop = 'transparent';
+port.style.borderBottom = 'transparent';
 port.style.marginTop = '25px';
 port.style.marginLeft = '20px';
 
-var btns = document.querySelector('body div#btns');
-
+		/*Configura a div em um tamanho agradável para que seja usada como área sensorial*/
 btns.style.width = '20px';
 btns.style.height = '15px';
 
 
 
-var MenuButton = document.querySelector('body div#btn1');
-
-MenuButton.style.backgroundColor = 'black';
+				/*desde ponto até 'pŕoximo, configuramos, todas as linhas dentro da div que refencia o menu*/
+MenuButton.style.backgroundColor = 'white';
 MenuButton.style.width = '20px';
 MenuButton.style.height = '3px';
 MenuButton.style.marginBottom = '2px';
 
-
-
-
-var MenuButton2 = document.querySelector('body div#btn2');
-
-MenuButton2.style.backgroundColor = 'black';
+MenuButton2.style.backgroundColor = 'white';
 MenuButton2.style.width = '20px';
 MenuButton2.style.height = '3px';
 MenuButton2.style.marginBottom = '2px';
 MenuButton2.style.textAlign = 'center';
 MenuButton2.style.aligncontent = 'center';
 
-
-
-
-var MenuButton3 = document.querySelector('body div#btn3');
-
-MenuButton3.style.backgroundColor = 'black';
+MenuButton3.style.backgroundColor = 'white';
 MenuButton3.style.width = '20px';
 MenuButton3.style.height = '3px';
 MenuButton3.style.marginBottom = '2px';
-
-function menuaberto() {
-	menu.style.display = 'block';
-	MenuButton2.style.display = 'none';
-	MenuButton3.style.display = 'none';
-	MenuButton.style.display = 'none';
-	
-}
-
-
-
-function menufechado() {
-	menu.style.display = 'none';
-	MenuButton2.style.display = 'block';
-	MenuButton3.style.display = 'block';
-	MenuButton.style.display = 'block';
-
-
-}
-
-btns.onmouseover = function menu(){
-	menuaberto();
-}
-
-
-btns.onmouseout = function menu2 (){
-	menufechado();
-}
-
-menu.onmouseover = function menu3 (){
-	menuaberto();
-}
-
-menu.onmouseout = function menu4 (){
-	menufechado();
-}
-
-
-
-
-
-proj.onclick = function ( ) {
-	alert ('Uma nova janela será aberta!');
-	window.open ('https://github.com/BrGUILHERMEHenrique');
-
-}
-
-proj.onmouseover = function (){
-	proj.style.height = '20%';
-	proj.style.fontSize = '30px';
-	proj.style.color = 'white';
-	proj.style.backgroundColor = 'rgba(0, 0, 0, 10%)';
-	menu.style.msFilter = 'blur(20px)';
-
-}
-
-proj.onmouseout = function () {
-	proj.style.fontSize = '20px';
-	proj.style.color = 'black';
-	proj.style.backgroundColor = 'transparent';
-}
-
-port.onmouseover =  function() {
-	port.style.fontSize = '24px';
-	port.style.color = 'white';
-}
-
-port.onmouseout = function ( ) {
-	port.style.fontSize = '20px' ;
-	port.style.color = 'black';
-}
-port.onclick = function ( ){
-	window.open('projetos.html');
-}
+				/*Final da configuração das linhas*/
