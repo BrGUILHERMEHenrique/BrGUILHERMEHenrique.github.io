@@ -42,25 +42,14 @@ function menufechado() {
 
 
 		/*Desda parte para até o próximo ponto se chama as funções de menu aberto e fechado em suas devidas ocasiões*/
-btns.onmouseover = function menu(){
-	
-	menuaberto();
-}
+btns.onmouseover = menuaberto;
 
+btns.onmouseout = menufechado;
 
-btns.onmouseout = function menu2 (){
-	
-	menufechado();
-}
+menu.onmouseover = menuaberto;
 
-menu.onmouseover = function menu3 (){
-		menuaberto();
-}
+menu.onmouseout = menufechado;
 
-menu.onmouseout = function menu4 (){
-	
-	menufechado();
-}
 		/*Término da parte de chamada de funções*/
 
 /*Cria uma função que abre a página relacionada ao nome do botão*/
