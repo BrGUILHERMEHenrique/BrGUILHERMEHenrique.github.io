@@ -1,0 +1,50 @@
+:root{ /* Pertmite criar variáveis globais */
+    --color-primary: #3C84B1;
+    --color-secundary: #1342ab;
+    --color-background: rgb(240, 235, 229);
+    --color-font: #eee;
+    --color-sombra: rgba(0, 0, 0, 0.2);
+    --color-social: #262626;
+    --color-logo: #0a0091;
+}
+
+html, body{
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;   
+    background: var(--color-background);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.hidden{
+    display: none;
+}
+
+.modal-content{
+    width: 850px;
+}
+
+.image-logo{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 60px;
+}
+
+.nav-tabs{
+    margin-top: 60px;
+}
+
+tbody{
+    cursor: pointer;
+}
+
+table{
+    box-shadow: 0 4px 8px 0 var(--color-sombra), 0 6px 20px 0 var(--color-sombra);
+}
