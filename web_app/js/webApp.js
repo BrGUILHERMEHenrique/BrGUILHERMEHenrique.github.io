@@ -315,7 +315,7 @@ let info = (() => {
         let index = funcionarios.indexOf(func);
         if (index == -1) return;
 
-        $('#modal-adicionar').modal({
+        $('#modal-editar').modal({
             backdrop: 'static'
         });
 
@@ -333,6 +333,7 @@ let info = (() => {
                 return ende;
             }
         })
+
 
         let indexEndereco = enderecos.indexOf(end);
 
@@ -360,6 +361,7 @@ let info = (() => {
             _validarRegex(regexEmail, inputEmail.value);
             _validarRegex(regexpf, inputCpf.value);
             _validarRegex(regexData, inputNascimento.value);
+
             let enderecoAtualizado = {
                 codigo: endereco1,
                 cep: inputCepEditar.value,
@@ -380,9 +382,8 @@ let info = (() => {
                 salario: inputSalarioEditar.value,
                 endereco1: endereco
             }
-
-            enderecos.splice(indexEndereco, 1, enderecoAtualizado);
-            funcionarios.splice(index, 1, funcionarioAtualizado);
+            funcionarios.splice(funcionarios.indexOf(func), 1, funcionarioAtualizado);
+            enderecos.splice(enderecos.indexOf(end), 1, enderecoAtualizado);
 
 
             _popularTabelaFuncionario(funcionarios);
