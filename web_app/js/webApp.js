@@ -139,7 +139,13 @@ let info = (() => {
         });
 
     }
-
+    function _acharEndereco(enderecos1, numero){
+        for(let end of enderecos1){
+            if(end.codigo == numero){
+                return end.cep;
+            }
+        }
+    }
     function _popularTabelaFuncionario(listaFuncionarios) {
         let tabelaFuncionarios = document.querySelector('.tableFuncionario')
         // Aqui eu limpo a tabela inteira \o/
@@ -147,6 +153,7 @@ let info = (() => {
 
         listaFuncionarios.map(u => {
             // Criando os elementos 
+            let enderecoo = undefined;
             var tr = document.createElement('tr');
 
             var tdCodigo = document.createElement('td');
@@ -166,11 +173,7 @@ let info = (() => {
             tdEmail.textContent = u.email;
             tdSenha.textContent = u.senha;
             tdNascimento.textContent = u.datanascimento;
-            tdEndereco.textContent = enderecos.forEach(e => {
-                if (e.codigo == u.codigo) {
-                    return e.cep;
-                }
-            });
+            tdEndereco.textContent = _acharEndereco(enderecos, u.endereco);
             tdSalario.textContent = u.salario;
             tdAcoes.innerHTML = `
             <button
