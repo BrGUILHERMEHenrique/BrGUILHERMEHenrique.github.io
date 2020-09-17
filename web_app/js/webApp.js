@@ -75,6 +75,7 @@ let info = (() => {
         endereco: 1
     }];
 
+    let funcionario = {};
     let enderecos = [{
         codigo: 1,
         cep: "54268454",
@@ -249,7 +250,7 @@ let info = (() => {
     }
     //GET de um e apenas um funcionario pelo codigo
     function _pegarPorCodigoFuncionario(codigo) {
-        let funcionario = null
+        funcionario = null
         for (let funcionario1 of funcionarios) {
             if (funcionario1.codigo == codigo) {
                 funcionario = funcionario1
@@ -312,7 +313,7 @@ let info = (() => {
         if (index == -1) return;
 
         $('#modal-adicionar').modal({
-            backdrop: 'static's
+            backdrop: 'static'
         });
 
         inputNomeEditar.value = funcionario.nome;
