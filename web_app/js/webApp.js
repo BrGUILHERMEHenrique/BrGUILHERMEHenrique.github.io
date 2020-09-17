@@ -75,8 +75,6 @@ let info = (() => {
         endereco: 1
     }];
 
-    let funcionario = {};
-
     let enderecos = [{
         codigo: 1,
         cep: "54268454",
@@ -167,7 +165,7 @@ let info = (() => {
             tdEmail.textContent = u.email;
             tdSenha.textContent = u.senha;
             tdNascimento.textContent = u.datanascimento;
-            tdEndereco.textContent = enderecos.map(e => {
+            tdEndereco.textContent = enderecos.forEach(e => {
                 if (e.codigo == u.codigo) {
                     return e.cep;
                 }
@@ -251,6 +249,7 @@ let info = (() => {
     }
     //GET de um e apenas um funcionario pelo codigo
     function _pegarPorCodigoFuncionario(codigo) {
+        let funcionario = null
         for (let funcionario1 of funcionarios) {
             if (funcionario1.codigo == codigo) {
                 funcionario = funcionario1
@@ -313,7 +312,7 @@ let info = (() => {
         if (index == -1) return;
 
         $('#modal-adicionar').modal({
-            backdrop: 'static'
+            backdrop: 'static's
         });
 
         inputNomeEditar.value = funcionario.nome;
