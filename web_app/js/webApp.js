@@ -311,25 +311,25 @@ let info = (() => {
     }
 
     function editarFuncionario(codigo) {
-        let funcionario = _pegarPorCodigoFuncionario(codigo);
-        let index = funcionarios.indexOf(funcionario);
+        let func = _pegarPorCodigoFuncionario(codigo);
+        let index = funcionarios.indexOf(func);
         if (index == -1) return;
 
         $('#modal-adicionar').modal({
             backdrop: 'static'
         });
 
-        inputNomeEditar.value = funcionario.nome;
-        inputCpfEditar.value = funcionario.cpf;
-        inputEmailEditar.value = funcionario.email;
-        inputSenhaEditar.value = funcionario.senha;
-        inputNascimentoEditar.value = funcionario.datanascimento;
-        inputSalarioEditar.value = funcionario.salario;
+        inputNomeEditar.value = func.nome;
+        inputCpfEditar.value = func.cpf;
+        inputEmailEditar.value = func.email;
+        inputSenhaEditar.value = func.senha;
+        inputNascimentoEditar.value = func.datanascimento;
+        inputSalarioEditar.value = func.salario;
 
-        let endereco = undefined;
+        let endereco1 = undefined;
 
         let end = enderecos.forEach(ende => {
-            if (ende.codigo == funcionario.codigo) {
+            if (ende.codigo == func.codigo) {
                 return ende;
             }
         })
@@ -337,14 +337,14 @@ let info = (() => {
         let indexEndereco = enderecos.indexOf(end);
 
         enderecos.map(e => {
-            if (e.codigo == funcionario.codigo) {
+            if (e.codigo == func.codigo) {
                 inputBairroEditar.value = e.bairro;
                 inputCepEditar.value = e.cep;
                 inputCidadeEditar.value = e.cidade;
                 inputEstadoEditar.value = e.estado;
                 inputNumeroEditar.value = e.numero;
                 inputRuaEditar.value = e.rua;
-                endereco = e.codigo;
+                endereco1 = e.codigo;
             }
         });
 
@@ -361,7 +361,7 @@ let info = (() => {
             _validarRegex(regexpf, inputCpf.value);
             _validarRegex(regexData, inputNascimento.value);
             let enderecoAtualizado = {
-                codigo: endereco,
+                codigo: endereco1,
                 cep: inputCepEditar.value,
                 rua: inputRuaEditar.value,
                 bairro: inputBairroEditar.value,
@@ -371,14 +371,14 @@ let info = (() => {
             }
 
             let funcionarioAtualizado = {
-                codigo: funcionario.codigo,
+                codigo: func.codigo,
                 nome: inputNomeEditar.value,
                 cpf: inputCpfEditar.value,
                 email: inputEmailEditar.value,
                 senha: inputSenhaEditar.value,
                 datanascimento: inputNascimentoEditar.value,
                 salario: inputSalarioEditar.value,
-                endereco: endereco
+                endereco1: endereco
             }
 
             enderecos.splice(indexEndereco, 1, enderecoAtualizado);
